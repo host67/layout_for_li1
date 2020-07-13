@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@font-face {
+  font-family: SFUID Bold;
+  src: url(../fonts/sf-ui-display-bold.ttf); }
+
+@font-face {
+  font-family: SFUID Medium;
+  src: url(../fonts/sf-ui-display-medium.ttf); }
+
+@font-face {
+  font-family: SFUID Heavy;
+  src: url(../fonts/sf-ui-display-heavy.otf); }
+
+@font-face {
+  font-family: SFUID Light;
+  src: url("../fonts/sf_ui_display_light.ttf"); }
+
+body {
+  margin: 0;
+  color: #3b3b3b; }
+
+a {
+  text-decoration: none;
+  color: #000000;
+  transition: 0.3s; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+.top-header {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.desktop_logo {
+  background-color: #ff0000;
+  padding: 21px 9px 23px; }
+
+.mobile_logo {
+  display: none; }
+
+.top_header_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 11px "SFUID Bold", Verdana, Arial; }
+
+.mobile_menu {
+  display: none; }
+
+.top_menu {
+  display: flex;
+  justify-content: space-between;
+  width: 538px;
+  margin-left: 24px; }
+  .top_menu a {
+    text-decoration: none;
+    color: #1f1f1f;
+    letter-spacing: 1.2px; }
+
+.phone {
+  letter-spacing: 0.9px;
+  margin-left: 42px; }
+
+.top_lang {
+  margin-left: 20px; }
+  .top_lang ul {
+    display: flex;
+    justify-content: space-between;
+    width: 42px; }
+  .top_lang li {
+    border-bottom: solid 3px #ff000000;
+    transition: 0.3s; }
+  .top_lang a {
+    letter-spacing: 1.5px; }
+
+.word_menu {
+  letter-spacing: 1.5px;
+  margin-left: 20px; }
+
+.menu_toggle span {
+  display: block;
+  height: 2px;
+  background: #ff0000;
+  width: 20px;
+  margin-bottom: 3px; }
+
+.top_menu2 {
+  display: flex;
+  justify-content: space-between;
+  width: 540px;
+  letter-spacing: 0.4px; }
+  .top_menu2 a {
+    font: 12px "SFUID Light", Verdana, Arial;
+    color: white;
+    font-weight: 600; }
+  .top_menu2 li {
+    padding-bottom: 6px;
+    margin-top: 6px;
+    border-bottom: solid 3px #ff000000;
+    transition: 0.3s; }
+
+.top_menu2 li:hover, .top_lang li:hover, .current-menu-item {
+  border-bottom: solid 3px #ff0000; }
+
+.current-menu-item {
+  border-bottom: solid 3px #ff0000 !important; }
+
+.top_menu a:hover, .phone a:hover, .word_menu a:hover {
+  color: #ff0000; }
+
+.bottom-header {
+  background-color: #000000;
+  color: #ffffff; }
+
+.bottom-header_wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 11px; }
+
+.left_logo {
+  display: inline-flex;
+  align-items: center; }
+  .left_logo a {
+    font: 16px "SFUID Bold", Verdana, Arial;
+    letter-spacing: 0.4px;
+    color: white;
+    margin: 0 23px; }
+
+#top_image {
+  background: url(../img/top_image.jpg) no-repeat;
+  background-size: cover;
+  height: 400px; }
+
+#rezume {
+  margin: 0 auto;
+  width: 384px;
+  margin-top: 50px; }
+
+.accordion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px;
+  font: 11px "SFUID Medium", Verdana, Arial;
+  letter-spacing: 0.4px;
+  background-color: white;
+  padding: 19px 20px 19px 32px;
+  width: 100%;
+  text-align: left;
+  border: solid 1px #b3b3b3;
+  outline: none;
+  transition: 0.3s;
+  margin-top: 22px; }
+  .accordion:hover {
+    color: #ff0000; }
+  .accordion:after {
+    content: "+";
+    font: 24px 'SFUID Heavy', Verdana, Arial;
+    float: right;
+    margin-left: 5px; }
+
+.active:after {
+  content: "-"; }
+
+/* Стиль аккордеон панели. Примечание: скрыто по умолчанию */
+.panel {
+  padding: 0 13px;
+  border-left: solid 1px #b3b3b3;
+  border-right: solid 1px #b3b3b3;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; }
+  .panel ul {
+    padding-left: 2px;
+    margin-bottom: 14px;
+    margin-top: 17px; }
+  .panel li {
+    margin-left: 12px;
+    padding-left: 8px;
+    list-style-image: url(../img/marker.png);
+    font: 11px "SFUID Medium", Verdana, Arial;
+    line-height: 30px; }
+  .panel li:before {
+    content: ''; }
+  .panel button {
+    margin: 0 23px 23px 17px;
+    padding: 16px 50px; }
+
+.panel button, .rezume button, input[type=submit] {
+  border: none;
+  background-color: #ff0000;
+  color: white;
+  font: 11px "SFUID Medium", Verdana, Arial;
+  letter-spacing: 0.4px;
+  border-radius: 3px;
+  box-shadow: 0 0 9px 1px #fe9393;
+  transition: 0.3s;
+  cursor: pointer; }
+
+.rezume {
+  text-align: center;
+  width: 250px;
+  margin: 70px auto 75px; }
+  .rezume button {
+    margin-right: 0;
+    padding: 16px 50px; }
+
+.panel button:hover, .rezume button:hover, input[type=submit]:hover {
+  box-shadow: none;
+  background-color: #e80000; }
+
+footer {
+  background-color: #f5f6f9; }
+
+.footer_container {
+  max-width: 800px;
+  padding-top: 43px;
+  padding-bottom: 30px;
+  margin: 0 auto; }
+
+input[type=text] {
+  width: 622px;
+  padding-left: 16px;
+  font: 14px "SFUID Light", Verdana, Arial;
+  line-height: 38px;
+  letter-spacing: 0.4px; }
+
+input[type=submit] {
+  padding: 15px 42px; }
+
+hr {
+  border: 1px solid #d6d3d3;
+  border-bottom-width: 0; }
+
+.footer_container1 {
+  max-width: 800px;
+  margin: 45px auto 40px; }
+
+.footer_link {
+  max-width: 760px;
+  display: flex;
+  justify-content: space-between; }
+
+.colum {
+  font: 12px "SFUID Light", Verdana, Arial;
+  line-height: 36px; }
+  .colum ul {
+    padding: 0; }
+  .colum a {
+    color: #a3a6ac;
+    letter-spacing: 0.5px; }
+  .colum a:hover {
+    color: #ff0000; }
+
+.caption {
+  font-weight: 600; }
+
+.footer_container2 {
+  max-width: 800px;
+  margin: 0 auto; }
+
+.props {
+  padding: 20px 0;
+  font: 12px "SFUID Light", Verdana, Arial;
+  color: #a3a6ac;
+  line-height: 18px;
+  letter-spacing: 0.4px; }
